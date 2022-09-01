@@ -1,0 +1,110 @@
+{
+	"_BabeleditLanguageAndFileName": "en-BZ, descriptions.json",
+	"_THIS_FILE:": "THIS FILE CONTAINS THE DESCRIPTIONS, IN US English, FOR ALL TRANSLATION ENTRIES",
+	"buttonsSubmit": {
+		"register": "to register a new user",
+		"signIn": "to sign a user in and start a new session"
+	},
+	"labelsInput": {
+		"confirmPassword": "at registration of a new user, confirm password",
+		"email": "a user's email address",
+		"nickname_esu": "a nickname for a user",
+		"password": "a user's password"
+	},
+	"linksInternal": {
+		"about": "",
+		"home": "",
+		"register": "",
+		"signIn": "",
+		"userEntries": ""
+	},
+	"lookupTables": {
+		"sharingStatuses": {
+			"disabled": "for sharing partner settings, if partner sharing is not active: disabled",
+			"enabled": "for sharing partner settings, if partner sharing is active: enabled"
+		}
+	},
+	"messagesError": {
+		"signIn": "when signing in, and it fails: Your email and password combination is not valid.<br> Please try again."
+	},
+	"messagesValidation": {
+		"confirmPassword": "when registering a new user, and this field is blank: Please fill out this field, with at least 4 characters",
+		"email": "when registering a new user, and this field is blank: Please fill out this field",
+		"nickname": "when registering a new user, and this field is blank: Please fill out this field",
+		"password": "when registering a new user, and this field is blank: Please fill out this field, with at least 4 characters"
+	},
+	"nav": {
+		"about": "Link description for the About Page",
+		"register": "Link description for Register a new account",
+		"signIn": "Link description for Sign a user in",
+		"submenus": {
+			"about": "",
+			"aboutDreamOnline": "",
+			"aboutUs": "",
+			"contact": "",
+			"dreamEntryNew": "",
+			"dreamEntryNewQuickNote": "",
+			"dreamJournal": "",
+			"dreamViewRandom": "",
+			"dreamsBrowse": "",
+			"dreamsBrowseImages": "",
+			"dreamsBrowseQuickNotes": "",
+			"dreamsPrintOrDownload": "",
+			"dreamwork": "",
+			"dreamworkStartWithConnectedDreamsSet": "",
+			"dreamworkStartWithDream": "",
+			"dreamworkStartWithEvents": "",
+			"dreamworkStartWithLifeJournalEntry": "",
+			"dreamworkStartWithPeopleMentioned": "",
+			"faq": "",
+			"gettingStarted": "",
+			"helpAll": "",
+			"lifeJournal": "",
+			"lifeJournalBrowseEntries": "",
+			"lifeJournalBrowseEntriesForDream": "",
+			"lifeJournalEntryNew": "",
+			"lifeJournalEntryNewAttachedToDream": "",
+			"lifeJournalPrintOrDownload": "",
+			"pricing": "",
+			"securityAndPrivacy": "",
+			"sharingShowDreamsSharedWithMe": "",
+			"sharingShowLifeJournalEntriesSharedWithMe": "",
+			"sharingShowMySharedDreams": "",
+			"sharingShowMySharedLifeJournalEntries": "",
+			"termsOfService": ""
+		},
+		"top": {
+			"about": "",
+			"dreamEntryNew": "",
+			"help": "",
+			"home": "",
+			"journalsWorkingWith": "",
+			"lifeJournalEntryNew": "",
+			"more": "",
+			"pricing": "",
+			"register": "",
+			"signIn": "",
+			"userEntries": ""
+		}
+	},
+	"site": {
+		"title": ""
+	},
+	"textOnPages": {
+		"about": {
+			"heading": "This is the heading on the about page.",
+			"mainText": ""
+		},
+		"home": {
+			"heading": "A better way of working with dreams, thoughts, and experiences.",
+			"mainText": "welcome to the site text"
+		},
+		"register": {
+			"passwordLossWarning": "a warning that shows up in a modal immediately after creating a new user: Please make sure you know your password.<br><br>  If you lose it, currently there is no way to reset it, so you will lose access to your content on this site, due to it being encrypted.  Your password is required to access your content on this site, and we can not reset it for you.<br><br> (We will have some reset options available as soon as we can create them.)",
+			"passwordLossWarningTitle": "title of a warning that shows up in a modal immediately after creating a new user: Do not lose your password!",
+			"passwordsDoNotMatchMessage": "message that shows up when creating a new user: Password and Confirm password entries do not match.  Please use the same password in both entries. To see what you've typed, click the eye icon if no one else can see your screen.",
+			"passwordsDoNotMatchTitle": "title of message that shows up when creating a new user: Passwords do not match",
+			"willBeSignedInAutomatically": "explation on new user registration page: (You will be signed in automatically when you register)"
+		}
+	}
+}

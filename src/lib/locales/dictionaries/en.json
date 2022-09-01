@@ -1,0 +1,110 @@
+{
+	"_BabeleditLanguageAndFileName": "en-US, en.json",
+	"_THIS_FILE:": "",
+	"buttonsSubmit": {
+		"register": "Register",
+		"signIn": "Sign In"
+	},
+	"labelsInput": {
+		"confirmPassword": "Confirm password",
+		"email": "Email",
+		"nickname_esu": "Nickname",
+		"password": "Password"
+	},
+	"linksInternal": {
+		"about": "",
+		"home": "",
+		"register": "",
+		"signIn": "",
+		"userEntries": ""
+	},
+	"lookupTables": {
+		"sharingStatuses": {
+			"disabled": "disabled",
+			"enabled": "enabled"
+		}
+	},
+	"messagesError": {
+		"signIn": "Your email and password combination is not valid.<br> Please try again."
+	},
+	"messagesValidation": {
+		"confirmPassword": "Please fill out this field, with at least 4 characters",
+		"email": "Please fill out this field",
+		"nickname": "Please fill out this field",
+		"password": "Please fill out this field, with at least 4 characters"
+	},
+	"nav": {
+		"about": "",
+		"register": "",
+		"signIn": "",
+		"submenus": {
+			"about": "About",
+			"aboutDreamOnline": "About DreamOnline",
+			"aboutUs": "About us",
+			"contact": "Contact us",
+			"dreamEntryNew": "New Dream entry",
+			"dreamEntryNewQuickNote": "New Dream quick entry",
+			"dreamJournal": "Dream Journal",
+			"dreamViewRandom": "View a random dream",
+			"dreamsBrowse": "Browse Dreams",
+			"dreamsBrowseImages": "Browse drawings/pictures",
+			"dreamsBrowseQuickNotes": "Browse Dream quick notes",
+			"dreamsPrintOrDownload": "Print/Download dreams",
+			"dreamwork": "Dreamwork",
+			"dreamworkStartWithConnectedDreamsSet": "Start with a Connected Dreams set",
+			"dreamworkStartWithDream": "Start with a Dream Journal entry",
+			"dreamworkStartWithEvents": "Start with events",
+			"dreamworkStartWithLifeJournalEntry": "Start with a Life Journal entry",
+			"dreamworkStartWithPeopleMentioned": "Start with people mentioned",
+			"faq": "Frequently Asked Questions",
+			"gettingStarted": "Getting started",
+			"helpAll": "All help topics",
+			"lifeJournal": "Life Journal",
+			"lifeJournalBrowseEntries": "Browse Life Journel entries",
+			"lifeJournalBrowseEntriesForDream": "Browse Life Journel entries for a Dream",
+			"lifeJournalEntryNew": "New Life Journal entry",
+			"lifeJournalEntryNewAttachedToDream": "New Life Journal entry, attached to a dream",
+			"lifeJournalPrintOrDownload": "Print/Download Life Journal entries",
+			"pricing": "Pricing",
+			"securityAndPrivacy": "Security & Privacy",
+			"sharingShowDreamsSharedWithMe": "Show Dreams shared with me",
+			"sharingShowLifeJournalEntriesSharedWithMe": "Show Life Journal entries shared with me",
+			"sharingShowMySharedDreams": "Show my shared Dreams",
+			"sharingShowMySharedLifeJournalEntries": "Show my shared Life Journal entries",
+			"termsOfService": "Terms of Service"
+		},
+		"top": {
+			"about": "About",
+			"dreamEntryNew": "New Dream entry",
+			"help": "Help",
+			"home": "Home",
+			"journalsWorkingWith": "Working with Journals",
+			"lifeJournalEntryNew": "New Life Journal entry",
+			"more": "More...",
+			"pricing": "Pricing",
+			"register": "Register",
+			"signIn": "Sign In",
+			"userEntries": ""
+		}
+	},
+	"site": {
+		"title": "DreamOnline"
+	},
+	"textOnPages": {
+		"about": {
+			"heading": "About this site.",
+			"mainText": "Our purpose is to help people work with their dreams in order to discover what the dreams mean to them, and to share their dreams with others when desired.\n\nOur goal is to provide the best tools, methods, ideas, and environment possible to help users work with their dreams in fun, interesting, and useful ways.\n\nWe believe dreams can provide valuable and interesting insights about ourselves, our relationships and the world around us in general. We believe dreams can help us make decisions or better understand the ones we have made. We believe dreams can help us be more creative. We believe dreams can be very entertaining. We believe dreams can show us all how connected we truly are. We believe everyone dreams. We believe the dreamer is the best person to figure out what the dream really means, and that there are people, tools, and methods that can help the dreamer do this.\n\nWe hope you join us in working with dreams, whether on our site, on another site, or on your own.\n\nYou never know what might happen if you DreamOnline!"
+		},
+		"home": {
+			"heading": "A better way of working with dreams, thoughts, and experiences.",
+			"mainText": "DreamOnline will be undergoing a complete site redesign.  Once we have an expected launch date, we'll post it here.\n\nIf you'd like to sign up for a subscription before the redesign launch, check out our pricing page or contact us."
+		},
+		"register": {
+			"passwordLossWarning": "Please make sure you know your password.<br><br>  If you lose it, currently there is no way to reset it, so you will lose access to your content on this site, due to it being encrypted.  Your password is required to access your content on this site, and we can not reset it for you.<br><br> (We will have some reset options available as soon as we can create them.)",
+			"passwordLossWarningTitle": "Do not lose your password!",
+			"passwordsDoNotMatchMessage": "Password and Confirm password entries do not match.  Please use the same password in both entries. To see what you've typed, click the eye icon if no one else can see your screen.",
+			"passwordsDoNotMatchTitle": "Passwords do not match",
+			"willBeSignedInAutomatically": "(You will be signed in automatically when you register)"
+		}
+	}
+}

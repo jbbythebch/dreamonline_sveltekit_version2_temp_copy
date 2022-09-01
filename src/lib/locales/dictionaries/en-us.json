@@ -1,0 +1,110 @@
+{
+	"_BabeleditLanguageAndFileName": "en-JM, en-us.json",
+	"_THIS_FILE:": "",
+	"buttonsSubmit": {
+		"register": "Register",
+		"signIn": "Sign In"
+	},
+	"labelsInput": {
+		"confirmPassword": "Confirm password",
+		"email": "Email",
+		"nickname_esu": "Nickname",
+		"password": "Password"
+	},
+	"linksInternal": {
+		"about": "About",
+		"home": "Home",
+		"register": "Register",
+		"signIn": "Sign in",
+		"userEntries": "User Entries"
+	},
+	"lookupTables": {
+		"sharingStatuses": {
+			"disabled": "disabled",
+			"enabled": "enabled"
+		}
+	},
+	"messagesError": {
+		"signIn": "Your email and password combination is not valid.<br> Please try again."
+	},
+	"messagesValidation": {
+		"confirmPassword": "Please fill out this field, with at least 4 characters",
+		"email": "Please fill out this field",
+		"nickname": "Please fill out this field",
+		"password": "Please fill out this field, with at least 4 characters"
+	},
+	"nav": {
+		"about": "",
+		"register": "",
+		"signIn": "",
+		"submenus": {
+			"about": "",
+			"aboutDreamOnline": "",
+			"aboutUs": "",
+			"contact": "",
+			"dreamEntryNew": "",
+			"dreamEntryNewQuickNote": "",
+			"dreamJournal": "",
+			"dreamViewRandom": "",
+			"dreamsBrowse": "",
+			"dreamsBrowseImages": "",
+			"dreamsBrowseQuickNotes": "",
+			"dreamsPrintOrDownload": "",
+			"dreamwork": "",
+			"dreamworkStartWithConnectedDreamsSet": "",
+			"dreamworkStartWithDream": "",
+			"dreamworkStartWithEvents": "",
+			"dreamworkStartWithLifeJournalEntry": "",
+			"dreamworkStartWithPeopleMentioned": "",
+			"faq": "",
+			"gettingStarted": "",
+			"helpAll": "",
+			"lifeJournal": "",
+			"lifeJournalBrowseEntries": "",
+			"lifeJournalBrowseEntriesForDream": "",
+			"lifeJournalEntryNew": "",
+			"lifeJournalEntryNewAttachedToDream": "",
+			"lifeJournalPrintOrDownload": "",
+			"pricing": "",
+			"securityAndPrivacy": "",
+			"sharingShowDreamsSharedWithMe": "",
+			"sharingShowLifeJournalEntriesSharedWithMe": "",
+			"sharingShowMySharedDreams": "",
+			"sharingShowMySharedLifeJournalEntries": "",
+			"termsOfService": ""
+		},
+		"top": {
+			"about": "",
+			"dreamEntryNew": "",
+			"help": "",
+			"home": "",
+			"journalsWorkingWith": "",
+			"lifeJournalEntryNew": "",
+			"more": "",
+			"pricing": "",
+			"register": "",
+			"signIn": "",
+			"userEntries": ""
+		}
+	},
+	"site": {
+		"title": "DreamOnline"
+	},
+	"textOnPages": {
+		"about": {
+			"heading": "",
+			"mainText": ""
+		},
+		"home": {
+			"heading": "A better way of working with dreams, thoughts, and experiences.",
+			"mainText": ""
+		},
+		"register": {
+			"passwordLossWarning": "Please make sure you know your password.<br><br>  If you lose it, currently there is no way to reset it, so you will lose access to your content on this site, due to it being encrypted.  Your password is required to access your content on this site, and we can not reset it for you.<br><br> (We will have some reset options available as soon as we can create them.)",
+			"passwordLossWarningTitle": "Do not lose your password!",
+			"passwordsDoNotMatchMessage": "Password and Confirm password entries do not match.  Please use the same password in both entries. To see what you've typed, click the eye icon if no one else can see your screen.",
+			"passwordsDoNotMatchTitle": "Passwords do not match",
+			"willBeSignedInAutomatically": "(You will be signed in automatically when you register)"
+		}
+	}
+}

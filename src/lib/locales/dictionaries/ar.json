@@ -1,0 +1,110 @@
+{
+	"_BabeleditLanguageAndFileName": "ar-SA, ar.json",
+	"_THIS_FILE:": "",
+	"buttonsSubmit": {
+		"register": "تسجيل",
+		"signIn": "تسجيل الدخول"
+	},
+	"labelsInput": {
+		"confirmPassword": "دريم اون لاين",
+		"email": "بريد إلكتروني",
+		"nickname_esu": "دريم اون لاين",
+		"password": "كلمة المرور"
+	},
+	"linksInternal": {
+		"about": "",
+		"home": "",
+		"register": "",
+		"signIn": "",
+		"userEntries": ""
+	},
+	"lookupTables": {
+		"sharingStatuses": {
+			"disabled": "معطل",
+			"enabled": "ممكّن"
+		}
+	},
+	"messagesError": {
+		"signIn": "تركيبة البريد الإلكتروني وكلمة المرور غير صالحة. <br> يرجى المحاولة مرة أخرى."
+	},
+	"messagesValidation": {
+		"confirmPassword": "يرجى ملء هذا الحقل بأربعة أحرف على الأقل",
+		"email": "الرجاء ملء هذا الحقل",
+		"nickname": "الرجاء ملء هذا الحقل",
+		"password": "يرجى ملء هذا الحقل بأربعة أحرف على الأقل"
+	},
+	"nav": {
+		"about": "",
+		"register": "",
+		"signIn": "",
+		"submenus": {
+			"about": "",
+			"aboutDreamOnline": "",
+			"aboutUs": "",
+			"contact": "",
+			"dreamEntryNew": "",
+			"dreamEntryNewQuickNote": "",
+			"dreamJournal": "",
+			"dreamViewRandom": "",
+			"dreamsBrowse": "",
+			"dreamsBrowseImages": "",
+			"dreamsBrowseQuickNotes": "",
+			"dreamsPrintOrDownload": "",
+			"dreamwork": "",
+			"dreamworkStartWithConnectedDreamsSet": "",
+			"dreamworkStartWithDream": "",
+			"dreamworkStartWithEvents": "",
+			"dreamworkStartWithLifeJournalEntry": "",
+			"dreamworkStartWithPeopleMentioned": "",
+			"faq": "",
+			"gettingStarted": "",
+			"helpAll": "",
+			"lifeJournal": "",
+			"lifeJournalBrowseEntries": "",
+			"lifeJournalBrowseEntriesForDream": "",
+			"lifeJournalEntryNew": "",
+			"lifeJournalEntryNewAttachedToDream": "",
+			"lifeJournalPrintOrDownload": "",
+			"pricing": "",
+			"securityAndPrivacy": "",
+			"sharingShowDreamsSharedWithMe": "",
+			"sharingShowLifeJournalEntriesSharedWithMe": "",
+			"sharingShowMySharedDreams": "",
+			"sharingShowMySharedLifeJournalEntries": "",
+			"termsOfService": ""
+		},
+		"top": {
+			"about": "حول",
+			"dreamEntryNew": "",
+			"help": "",
+			"home": "الصفحة الرئيسية",
+			"journalsWorkingWith": "",
+			"lifeJournalEntryNew": "",
+			"more": "",
+			"pricing": "",
+			"register": "تسجيل",
+			"signIn": "تسجيل الدخول",
+			"userEntries": "إدخالات المستخدم"
+		}
+	},
+	"site": {
+		"title": "حلم على الانترنت"
+	},
+	"textOnPages": {
+		"about": {
+			"heading": "",
+			"mainText": "هدفنا هو مساعدة الناس على تحقيق أحلامهم من أجل اكتشاف ما تعنيه لهم الأحلام ، ومشاركة أحلامهم مع الآخرين عند الرغبة.\n\nهدفنا هو توفير أفضل الأدوات والأساليب والأفكار والبيئة الممكنة لمساعدة المستخدمين على العمل مع أحلامهم بطرق ممتعة وممتعة ومفيدة.\n\nنعتقد أن الأحلام يمكن أن توفر رؤى قيمة ومثيرة للاهتمام عن أنفسنا وعلاقاتنا والعالم من حولنا بشكل عام. نعتقد أن الأحلام يمكن أن تساعدنا في اتخاذ القرارات أو فهم أفضل للقرارات التي اتخذناها. نعتقد أن الأحلام يمكن أن تساعدنا على أن نكون أكثر إبداعًا. نعتقد أن الأحلام يمكن أن تكون مسلية للغاية. نعتقد أن الأحلام يمكن أن تظهر لنا جميعًا مدى اتصالنا حقًا. نعتقد أن الجميع يحلم. نعتقد أن الحالم هو أفضل شخص يكتشف ما يعنيه الحلم حقًا ، وأن هناك أشخاصًا وأدوات وطرقًا يمكن أن تساعد الحالم على القيام بذلك.\n\nنأمل منكم الانضمام إلينا في العمل مع الأحلام سواء على موقعنا أو على موقع آخر أو بمفردك.\n\nأنت لا تعرف أبدًا ما قد يحدث إذا كنت تستخدم DreamOnline!"
+		},
+		"home": {
+			"heading": "",
+			"mainText": "مرحبًا بك في Dream Online! طريقة رائعة للعمل مع أحلامك."
+		},
+		"register": {
+			"passwordLossWarning": "الرجاء التأكد من أنك تعرف كلمة المرور الخاصة بك. <br> <br> إذا فقدتها ، فلا توجد طريقة حاليًا لإعادة تعيينها ، لذلك ستفقد الوصول إلى المحتوى الخاص بك على هذا الموقع ، بسبب تشفيره . كلمة المرور الخاصة بك مطلوبة للوصول إلى المحتوى الخاص بك على هذا الموقع ، ولا يمكننا إعادة تعيينها لك. <br> <br> (سيكون لدينا بعض خيارات إعادة التعيين المتاحة بمجرد أن نتمكن من إنشائها.) ",
+			"passwordLossWarningTitle": "لا تفقد كلمة المرور الخاصة بك!",
+			"passwordsDoNotMatchMessage": "كلمة المرور وتأكيد إدخالات كلمة المرور غير متطابقتين. الرجاء استخدام نفس كلمة المرور في كلا الإدخالين. لمعرفة ما كتبته ، انقر فوق رمز العين إذا لم يتمكن أي شخص آخر من رؤية شاشتك.",
+			"passwordsDoNotMatchTitle": "كلمات المرور غير متطابقة",
+			"willBeSignedInAutomatically": "(سيتم تسجيل دخولك تلقائيًا عند التسجيل)"
+		}
+	}
+}
