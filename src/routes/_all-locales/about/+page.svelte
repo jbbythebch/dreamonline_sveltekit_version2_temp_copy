@@ -3,6 +3,9 @@
 </script>
 
 <br>
+
+hey, what's the deal here?<br>
+
 <h1>{$_('textOnPages.about.heading')}</h1>
 <br>
 
