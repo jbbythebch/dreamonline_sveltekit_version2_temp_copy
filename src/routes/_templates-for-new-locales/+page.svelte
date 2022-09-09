@@ -1,5 +1,5 @@
 <script>
-  import Index from '/src/routes/_all-locales/index.svelte';
+  import Index from '/src/routes/_all-locales/+page.svelte';
 </script>
 
 <Index />
