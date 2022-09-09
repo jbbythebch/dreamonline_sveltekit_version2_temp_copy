@@ -18,7 +18,7 @@ echo "Has all your work been committed?"
 echo "Have you copied or moved ALL new or updated custom locale pages to the"
 echo "'_custom_locale_pages' folder? " 
 echo " "
-read -p "Continue? " -n 1 -r
+read -p "Continue? (press y or Y to continue)" -n 1 -r
 echo    # (optional) move to a new line
 if [[ ! $REPLY =~ ^[Yy]$ ]]
 then
@@ -37,19 +37,19 @@ for locale in ${all_locales[@]}; do
   echo "---------------------------"
   echo "deleting all files in the $locale locale folder..."
   read -n 1 -s -r -p "Press any key to continue"
-  rm -fv "../src/routes/${locale}/"*.*
+  rm -rfv ../src/routes/"${locale}"/*
   echo
   echo "copying files from _templates-for-new-locales to the $locale folder..."
   read -n 1 -s -r -p "Press any key to continue"
   echo
-  cp -fv "../src/routes/_templates-for-new-locales/"*.* "../src/routes/${locale}/"
-  rm "../src/routes/${locale}/_page-protection-module-options.svelte"
+  cp -Rfv ../src/routes/_templates-for-new-locales/* ../src/routes/"${locale}"/
+  rm ../src/routes/"${locale}"/_page-protection-module-options.svelte
   echo
 done
-
-echo "copying all custom locale pages..."
-read -n 1 -s -r -p "Press any key to continue"
-cp -Rfv "../src/routes/_custom-locale-pages/" "../src/routes/"
+ 
+ echo "copying all custom locale pages..."
+ read -n 1 -s -r -p "Press any key to continue"
+ cp -Rfv "../src/routes/_custom-locale-pages/" "../src/routes/"
 
 echo
 echo "Updating locales completed."

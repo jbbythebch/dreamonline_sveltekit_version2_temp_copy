@@ -3,7 +3,7 @@
 </script>
 
 <script>
-  import UserSignOut from '/src/routes/_all-locales/user-sign-out.svelte';
+  import UserSignOut from '/src/routes/_all-locales/user-sign-out/+page.svelte';
 </script>
 
 <UserSignOut />

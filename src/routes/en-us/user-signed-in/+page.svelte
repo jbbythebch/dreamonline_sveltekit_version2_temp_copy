@@ -3,7 +3,7 @@
 </script>
 
 <script>
-  import UserSignedIn from '/src/routes/_all-locales/user-signed-in.svelte';
+  import UserSignedIn from '/src/routes/_all-locales/user-signed-in/+page.svelte';
 </script>
 
 <UserSignedIn />

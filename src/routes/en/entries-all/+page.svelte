@@ -3,7 +3,7 @@
 </script>
 
 <script>
-  import EntriesAll from '/src/routes/_all-locales/entries-all.svelte';
+  import EntriesAll from '/src/routes/_all-locales/entries-all/+page.svelte';
 </script>
 
 <EntriesAll />

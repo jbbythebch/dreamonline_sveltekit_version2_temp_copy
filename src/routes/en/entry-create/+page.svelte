@@ -3,7 +3,7 @@
 </script>
 
 <script>
-  import EntryCreate from '/src/routes/_all-locales/entry-create.svelte';
+  import EntryCreate from '/src/routes/_all-locales/entry-create/+page.svelte';
 </script>
 
 <EntryCreate />
