@@ -1,3 +1,5 @@
+console.log("-------- at mutations/user-sign-in.js ------");
+
 export const mutationUserSignIn = `
   mutation ($email: String!, $password: String!) {
     userSignIn(

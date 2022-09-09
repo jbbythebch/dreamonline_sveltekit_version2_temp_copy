@@ -1,7 +1,8 @@
-import { createClient, defaultExchanges } from '@urql/svelte';
+import { createClient, setContextClient, defaultExchanges } from '@urql/svelte';
 import { devtoolsExchange } from '@urql/devtools';
 import { getToken } from '$lib/client-utils/get-token.js';
 
+let client;
 export function initializeClient() {
   createClient({
     url: 'http://localhost:3000/graphql',
@@ -9,8 +10,13 @@ export function initializeClient() {
       const token = getToken()
       return {
         headers: { authorization: token ? `Bearer ${token}` : '' },
-      }
+      };
     },
     exchanges: [devtoolsExchange, ...defaultExchanges],
   });
+
+  setContextClient(client);
 }
+
+
+

@@ -1,7 +1,8 @@
 <script>
   import { _ } from 'svelte-i18n';
-  import { operationStore, mutation} from '@urql/svelte';
-  import { session } from '$app/stores';
+  import { getContextClient, mutationStore } from '@urql/svelte';
+  //import { session } from '$app/stores';
+  import { page } from '$app/stores';
   import { goto } from '$app/navigation';
   import { mutationUserSignIn } from '$lib/graphql/mutations/user-sign-in.js';
   import { userEmail } from '$lib/stores.js';
@@ -9,9 +10,19 @@
 
   var variables;
 
-  const userSignInStore = operationStore(`${mutationUserSignIn}`);
+  const userSignInStore = mutationStore(`${mutationUserSignIn}`);
 
-  const userSignInMutation = mutation(userSignInStore);
+  //console.log("-------- at user-sign-in ------");
+  //const userSignInMutation = mutation(userSignInStore);
+  let result;
+  let client = getContextClient();
+  const userSignInMutation = (variables) => {
+    result = mutationStore({
+      client,
+      query: gql(userSignInStore),
+      variables: variables,
+    });
+  };
 
   function userSignIn(variables) {
     userSignInMutation(variables).then(result => {
@@ -57,7 +68,9 @@
     //  since the hooks.js file does not run again after sign in, unless the
     //  page is manually refreshed.
     document.cookie = 'userEmail=' + $userEmail + '; SameSite=Lax';
-    $session = { 'userEmail': $userEmail }
+    //$session = { 'userEmail': $userEmail }
+    $page.data.userEmail = $userEmail
+    console.log($page.data.userEmail);
 
     let currentLocale = getStoredLocale();
     let userLocale = userData.user.locale.localeCode;
