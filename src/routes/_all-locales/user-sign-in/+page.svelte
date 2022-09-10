@@ -1,7 +1,6 @@
 <script>
   import { _ } from 'svelte-i18n';
   import { mutationStore, gql, getContextClient } from '@urql/svelte';
-  //import { session } from '$app/stores';
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';
   import { mutationUserSignIn } from '$lib/graphql/mutations/user-sign-in.js';
@@ -11,9 +10,6 @@
   let variables;
   let result;
   let client = getContextClient();
-  //function userSignIn(variables) {
-  //async function userSignIn(variables) {
-  //$: userSignIn =  mutationStore({
   const userSignIn = (variables) => {
     result = mutationStore({
       client,
@@ -28,12 +24,13 @@
       email: event.target.email.value,
       password: event.target.password.value
     };
-    userSignIn(variables);
-    //userSignIn(variables).then(result => {
-    //  if (result.error) {
-    //    console.log("----- ERROR AT userSignIn -------", result.error);
-    //  }
-    //});
+    //userSignIn(variables);
+    userSignIn(variables).then(result => {
+      if (result.error) {
+        console.log("----- ERROR AT userSignIn -------", result.error);
+      }
+    });
+    debugger;
     console.log("------------ just past userSignIn ---------");
   }
 
