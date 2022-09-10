@@ -3,7 +3,7 @@
   import { mutationUserRegister } from '$lib/graphql/mutations/user-register.js'
   import { getStoredLocale } from '$lib/locales/i18n.js';
 
-  var variables
+  let variables;
 
   const userRegisterStore = operationStore(`${mutationUserRegister}`);
 

@@ -299,12 +299,12 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 90 + 135) / 271)
-exe 'vert 2resize ' . ((&columns * 90 + 135) / 271)
+exe 'vert 1resize ' . ((&columns * 90 + 135) / 270)
+exe 'vert 2resize ' . ((&columns * 89 + 135) / 270)
 exe '3resize ' . ((&lines * 32 + 34) / 68)
-exe 'vert 3resize ' . ((&columns * 89 + 135) / 271)
+exe 'vert 3resize ' . ((&columns * 89 + 135) / 270)
 exe '4resize ' . ((&lines * 31 + 34) / 68)
-exe 'vert 4resize ' . ((&columns * 89 + 135) / 271)
+exe 'vert 4resize ' . ((&columns * 89 + 135) / 270)
 argglobal
 3argu
 setlocal keymap=
@@ -436,11 +436,11 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 18 - ((17 * winheight(0) + 32) / 64)
+let s:l = 1 - ((0 * winheight(0) + 32) / 64)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 18
+keepjumps 1
 normal! 0
 wincmd w
 argglobal
@@ -574,11 +574,11 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 54 - ((0 * winheight(0) + 32) / 64)
+let s:l = 31 - ((30 * winheight(0) + 32) / 64)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 54
+keepjumps 31
 normal! 05|
 wincmd w
 argglobal
@@ -861,12 +861,13 @@ normal! zt
 keepjumps 4
 normal! 0
 wincmd w
-exe 'vert 1resize ' . ((&columns * 90 + 135) / 271)
-exe 'vert 2resize ' . ((&columns * 90 + 135) / 271)
+2wincmd w
+exe 'vert 1resize ' . ((&columns * 90 + 135) / 270)
+exe 'vert 2resize ' . ((&columns * 89 + 135) / 270)
 exe '3resize ' . ((&lines * 32 + 34) / 68)
-exe 'vert 3resize ' . ((&columns * 89 + 135) / 271)
+exe 'vert 3resize ' . ((&columns * 89 + 135) / 270)
 exe '4resize ' . ((&lines * 31 + 34) / 68)
-exe 'vert 4resize ' . ((&columns * 89 + 135) / 271)
+exe 'vert 4resize ' . ((&columns * 89 + 135) / 270)
 tabnext
 edit src/routes/_templates-for-new-locales/_page-protection-module-options.svelte
 set splitbelow splitright
@@ -889,11 +890,11 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 exe '1resize ' . ((&lines * 32 + 34) / 68)
-exe 'vert 1resize ' . ((&columns * 90 + 135) / 271)
+exe 'vert 1resize ' . ((&columns * 90 + 135) / 270)
 exe '2resize ' . ((&lines * 31 + 34) / 68)
-exe 'vert 2resize ' . ((&columns * 90 + 135) / 271)
-exe 'vert 3resize ' . ((&columns * 90 + 135) / 271)
-exe 'vert 4resize ' . ((&columns * 89 + 135) / 271)
+exe 'vert 2resize ' . ((&columns * 90 + 135) / 270)
+exe 'vert 3resize ' . ((&columns * 89 + 135) / 270)
+exe 'vert 4resize ' . ((&columns * 89 + 135) / 270)
 argglobal
 1argu
 if bufexists("src/routes/_templates-for-new-locales/_page-protection-module-options.svelte") | buffer src/routes/_templates-for-new-locales/_page-protection-module-options.svelte | else | edit src/routes/_templates-for-new-locales/_page-protection-module-options.svelte | endif
@@ -1455,13 +1456,12 @@ normal! zt
 keepjumps 5
 normal! 0
 wincmd w
-3wincmd w
 exe '1resize ' . ((&lines * 32 + 34) / 68)
-exe 'vert 1resize ' . ((&columns * 90 + 135) / 271)
+exe 'vert 1resize ' . ((&columns * 90 + 135) / 270)
 exe '2resize ' . ((&lines * 31 + 34) / 68)
-exe 'vert 2resize ' . ((&columns * 90 + 135) / 271)
-exe 'vert 3resize ' . ((&columns * 90 + 135) / 271)
-exe 'vert 4resize ' . ((&columns * 89 + 135) / 271)
+exe 'vert 2resize ' . ((&columns * 90 + 135) / 270)
+exe 'vert 3resize ' . ((&columns * 89 + 135) / 270)
+exe 'vert 4resize ' . ((&columns * 89 + 135) / 270)
 tabnext
 edit src/routes/_templates-for-new-locales/_page-protection-module-options.svelte
 set splitbelow splitright
@@ -1630,9 +1630,9 @@ set winminwidth=0
 set winwidth=1
 exe '1resize ' . ((&lines * 32 + 34) / 68)
 exe '2resize ' . ((&lines * 31 + 34) / 68)
-exe 'vert 2resize ' . ((&columns * 151 + 135) / 271)
+exe 'vert 2resize ' . ((&columns * 150 + 135) / 270)
 exe '3resize ' . ((&lines * 31 + 34) / 68)
-exe 'vert 3resize ' . ((&columns * 119 + 135) / 271)
+exe 'vert 3resize ' . ((&columns * 119 + 135) / 270)
 argglobal
 if bufexists("src/routes/_all-locales/entries-all/+page.svelte") | buffer src/routes/_all-locales/entries-all/+page.svelte | else | edit src/routes/_all-locales/entries-all/+page.svelte | endif
 balt src/routes/en/entries-all/+page.svelte
@@ -2052,9 +2052,9 @@ normal! 0
 wincmd w
 exe '1resize ' . ((&lines * 32 + 34) / 68)
 exe '2resize ' . ((&lines * 31 + 34) / 68)
-exe 'vert 2resize ' . ((&columns * 151 + 135) / 271)
+exe 'vert 2resize ' . ((&columns * 150 + 135) / 270)
 exe '3resize ' . ((&lines * 31 + 34) / 68)
-exe 'vert 3resize ' . ((&columns * 119 + 135) / 271)
+exe 'vert 3resize ' . ((&columns * 119 + 135) / 270)
 tabnext
 edit src/routes/_all-locales/entry-create/+page.svelte
 set splitbelow splitright
@@ -2202,10 +2202,10 @@ keepjumps exe s:l
 normal! zt
 keepjumps 1
 normal! 0
-tabnext 2
+tabnext 1
 set stal=1
-badd +2 src/routes/_all-locales/entry-create/+page.svelte
-badd +1 src/routes/_all-locales/user-register/+page.svelte
+badd +5 src/routes/_all-locales/entry-create/+page.svelte
+badd +6 src/routes/_all-locales/user-register/+page.svelte
 badd +1 src/routes/_all-locales/user-sign-in/+page.svelte
 badd +1 src/routes/_all-locales/user-sign-out/+page.svelte
 badd +1 src/routes/_all-locales/entries-all/+page.svelte
@@ -2215,8 +2215,7 @@ badd +1 src/lib/client-utils/init-client.js
 badd +14 src/routes/_templates-for-new-locales/_page-protection-module-options.svelte
 badd +1 src/routes/+layout.svelte
 badd +1 src/routes/en/entries-all/+page.svelte
-badd +122 package-lock.json
-badd +1 /Volumes/Documents1/DreamOnline/apps_front_end/dreamonline_sveltekit/src/routes/+page.js.on-hold
+badd +1 src/routes/+error.svelte
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif

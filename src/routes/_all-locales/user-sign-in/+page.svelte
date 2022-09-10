@@ -1,6 +1,6 @@
 <script>
   import { _ } from 'svelte-i18n';
-  import { getContextClient, mutationStore } from '@urql/svelte';
+  import { mutationStore, gql, getContextClient } from '@urql/svelte';
   //import { session } from '$app/stores';
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';
@@ -8,47 +8,33 @@
   import { userEmail } from '$lib/stores.js';
   import { setLocaleSettings, getStoredLocale } from '$lib/locales/i18n.js';
 
-  var variables;
-
-  const userSignInStore = mutationStore(`${mutationUserSignIn}`);
-
-  //console.log("-------- at user-sign-in ------");
-  //const userSignInMutation = mutation(userSignInStore);
+  let variables;
   let result;
   let client = getContextClient();
-  const userSignInMutation = (variables) => {
+  //function userSignIn(variables) {
+  //async function userSignIn(variables) {
+  //$: userSignIn =  mutationStore({
+  const userSignIn = (variables) => {
     result = mutationStore({
       client,
-      query: gql(userSignInStore),
+      query: gql(mutationUserSignIn),
       variables: variables,
     });
+    debugger;
   };
-
-  function userSignIn(variables) {
-    userSignInMutation(variables).then(result => {
-      // TODO: the console logging below is duplicated in the
-      //       markup; leaving it for now, for when coming back
-      //       to make the error handling more robust with clearer
-      //       messages, etc.
-      if (result.error) {
-        console.log('(other errors ---->)', result.error);
-      } else if (result.data.userSignIn.errors[0]) {
-        console.log(
-          '(sign in error ---->)',
-          result.data.userSignIn.errors[0].message
-        );
-      } else {
-        setUserState(result.data.userSignIn);
-      }
-    });
-  }
 
   function handleSubmit(event) {
     variables = {
       email: event.target.email.value,
       password: event.target.password.value
-    }
+    };
     userSignIn(variables);
+    //userSignIn(variables).then(result => {
+    //  if (result.error) {
+    //    console.log("----- ERROR AT userSignIn -------", result.error);
+    //  }
+    //});
+    console.log("------------ just past userSignIn ---------");
   }
 
   function setUserState(userData) {
@@ -99,27 +85,33 @@
   <br>
   <button type="submit">{$_('buttonsSubmit.signIn')}</button>
 </form>
-
-{#if $userSignInStore.error}
-  <!--
-    TODO: need a lot of work for error handling, but this one will trigger
-          when there's a 'Fail2Ban' type of lockout on API, among other errors
-  -->
-  <br>
-  <p>Failed login attempt.<br> 
-  Something unusual went wrong.<br>
-  Please try again later.<br>
-  </p>
-  {(console.log('OTHER ERRORS ----->', $userSignInStore.error), '')}
-{/if}
-
-{#if $userSignInStore.data}
-  {#if $userSignInStore.data.userSignIn.errors.length > 0}
-    {(console.log(
-        'SIGN IN ERRORS ---->', $userSignInStore.data.userSignIn.errors
-      ), ''
-    )}
+  
+<!--
+  {#if $userSignIn.fetching}
+    Loading...Error
+  {:else if $userSignIn.error}
+    <!- -
+      TODO: need a lot of work for error handling, but this one will trigger
+            when there's a 'Fail2Ban' type of lockout on API, among other errors
+    - ->
     <br>
-    <p>Failed login attempt.</p>
+    <p>Failed login attempt.<br> 
+    Something unusual went wrong.<br>
+    Please try again later.<br>
+    </p>
   {/if}
-{/if}
+
+  {#if $userSignInStore.data}
+    {#if $userSignInStore.data.userSignIn.errors.length > 0}
+      {(console.log(
+          'SIGN IN ERRORS ---->'
+<!--
+        ), ''
+      )}
+-->
+<!--
+      <br>
+      <p>Failed login attempt.</p>
+    {/if}
+  {/if}
+-->

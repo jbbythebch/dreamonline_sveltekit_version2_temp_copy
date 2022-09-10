@@ -2,7 +2,7 @@
   import { operationStore, mutation} from '@urql/svelte';
   import { mutationEntryCreate } from '$lib/graphql/mutations/entry-create.js'
 
-  var variables
+  let variables;
 
   const entryCreateStore = operationStore(`${mutationEntryCreate}`);
 

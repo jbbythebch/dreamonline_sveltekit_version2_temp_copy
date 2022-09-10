@@ -4,7 +4,7 @@ import { getToken } from '$lib/client-utils/get-token.js';
 
 let client;
 export function initializeClient() {
-  createClient({
+  const client = createClient({
     url: 'http://localhost:3000/graphql',
     fetchOptions: () => {
       const token = getToken()
