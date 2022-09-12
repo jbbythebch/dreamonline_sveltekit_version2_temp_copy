@@ -278,6 +278,7 @@ tabnew
 tabnew
 tabnew
 tabnew
+tabnew
 tabrewind
 edit /Volumes/Documents1/DreamOnline/apps_front_end/dreamonline_sveltekit_version1/src/routes/_all-locales/user-sign-in.svelte
 set splitbelow splitright
@@ -438,12 +439,12 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 43 - ((0 * winheight(0) + 32) / 64)
+let s:l = 1 - ((0 * winheight(0) + 32) / 64)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 43
-normal! 03|
+keepjumps 1
+normal! 0
 wincmd w
 argglobal
 3argu
@@ -463,7 +464,8 @@ setlocal nocindent
 setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
 setlocal cinoptions=
 setlocal cinwords=if,else,while,do,for,switch
-setlocal colorcolumn=
+set colorcolumn=0
+setlocal colorcolumn=0
 setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
 setlocal commentstring=/*%s*/
 setlocal complete=.,w,b,u,t,i
@@ -577,12 +579,12 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 32) / 64)
+let s:l = 108 - ((63 * winheight(0) + 32) / 64)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
-normal! 0
+keepjumps 108
+normal! 03|
 wincmd w
 argglobal
 3argu
@@ -872,6 +874,155 @@ exe 'vert 3resize ' . ((&columns * 89 + 135) / 270)
 exe '4resize ' . ((&lines * 31 + 34) / 68)
 exe 'vert 4resize ' . ((&columns * 89 + 135) / 270)
 tabnext
+edit src/lib/stores.js
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+argglobal
+1argu
+if bufexists("src/lib/stores.js") | buffer src/lib/stores.js | else | edit src/lib/stores.js | endif
+balt src/routes/_all-locales/entry-create/+page.svelte
+setlocal keymap=
+setlocal noarabic
+setlocal autoindent
+setlocal backupcopy=
+setlocal balloonexpr=
+setlocal nobinary
+setlocal nobreakindent
+setlocal breakindentopt=
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal nocindent
+setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/,://
+setlocal commentstring=//%s
+setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+setlocal conceallevel=0
+setlocal completefunc=
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal cursorlineopt=both
+setlocal define=\\(^\\s*(*async\\s\\+function\\|(*function\\)\\|^\\s*\\(\\*\\|static\\|async\\|get\\|set\\|\\i\\+\\.\\)\\|^\\s*\\(\\ze\\i\\+\\)\\(([^)]*).*{$\\|\\s*[:=,]\\)\\|^\\s*\\(export\\s\\+\\|export\\s\\+default\\s\\+\\)*\\(var\\|let\\|const\\|function\\|class\\)\\|\\<as\\>
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal expandtab
+if &filetype != 'javascript'
+setlocal filetype=javascript
+endif
+setlocal fixendofline
+setlocal foldcolumn=0
+set nofoldenable
+setlocal nofoldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=croql
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal formatprg=
+setlocal grepprg=
+setlocal iminsert=0
+setlocal imsearch=-1
+setlocal include=
+setlocal includeexpr=
+setlocal indentexpr=GetJavascriptIndent()
+setlocal indentkeys=0{,0},0),0],:,0#,!^F,o,O,e,0],0)
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255,$
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal lispwords=
+setlocal nolist
+setlocal listchars=
+setlocal nomacmeta
+setlocal makeencoding=
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=bin,octal,hex
+set number
+setlocal number
+setlocal numberwidth=4
+setlocal omnifunc=javascriptcomplete#CompleteJS
+setlocal path=.,,
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norelativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal scrolloff=-1
+setlocal shiftwidth=2
+setlocal noshortname
+setlocal showbreak=
+setlocal sidescrolloff=-1
+set signcolumn=yes
+setlocal signcolumn=yes
+setlocal nosmartindent
+setlocal softtabstop=2
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal spelloptions=
+setlocal statusline=
+setlocal suffixesadd=.js,.jsx,.es,.es6,.cjs,.mjs,.jsm,.vue,.json
+setlocal swapfile
+setlocal synmaxcol=3000
+if &syntax != 'javascript'
+setlocal syntax=javascript
+endif
+setlocal tabstop=2
+setlocal tagcase=
+setlocal tagfunc=
+setlocal tags=
+setlocal termwinkey=
+setlocal termwinscroll=10000
+setlocal termwinsize=
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal noundofile
+setlocal undolevels=-123456
+setlocal varsofttabstop=
+setlocal vartabstop=
+setlocal wincolor=
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal wrap
+setlocal wrapmargin=0
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 4 - ((3 * winheight(0) + 32) / 64)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 4
+normal! 0
+tabnext
 edit src/routes/_templates-for-new-locales/_page-protection-module-options.svelte
 set splitbelow splitright
 wincmd _ | wincmd |
@@ -899,7 +1050,6 @@ exe 'vert 2resize ' . ((&columns * 90 + 135) / 270)
 exe 'vert 3resize ' . ((&columns * 89 + 135) / 270)
 exe 'vert 4resize ' . ((&columns * 89 + 135) / 270)
 argglobal
-1argu
 if bufexists("src/routes/_templates-for-new-locales/_page-protection-module-options.svelte") | buffer src/routes/_templates-for-new-locales/_page-protection-module-options.svelte | else | edit src/routes/_templates-for-new-locales/_page-protection-module-options.svelte | endif
 balt src/routes/_all-locales/user-sign-in/+page.svelte
 setlocal keymap=
@@ -1039,7 +1189,6 @@ keepjumps 1
 normal! 0
 wincmd w
 argglobal
-1argu
 if bufexists("src/lib/auth/page-protection.js") | buffer src/lib/auth/page-protection.js | else | edit src/lib/auth/page-protection.js | endif
 balt src/routes/_templates-for-new-locales/_page-protection-module-options.svelte
 setlocal keymap=
@@ -1179,7 +1328,6 @@ keepjumps 7
 normal! 03|
 wincmd w
 argglobal
-1argu
 if bufexists("src/routes/+layout.svelte") | buffer src/routes/+layout.svelte | else | edit src/routes/+layout.svelte | endif
 balt src/lib/client-utils/init-client.js
 setlocal keymap=
@@ -1319,7 +1467,6 @@ keepjumps 30
 normal! 03|
 wincmd w
 argglobal
-1argu
 if bufexists("src/lib/client-utils/init-client.js") | buffer src/lib/client-utils/init-client.js | else | edit src/lib/client-utils/init-client.js | endif
 balt src/routes/+layout.svelte
 setlocal keymap=
@@ -2212,6 +2359,7 @@ badd +1 src/routes/_all-locales/entry-create/+page.svelte
 badd +1 src/routes/_all-locales/user-register/+page.svelte
 badd +1 src/routes/_all-locales/user-sign-in/+page.svelte
 badd +1 src/routes/_all-locales/user-sign-out/+page.svelte
+badd +1 src/lib/stores.js
 badd +1 src/routes/_all-locales/entries-all/+page.svelte
 badd +23 src/routes/_templates-for-new-locales/_page-protection-module-options.svelte
 badd +1 src/lib/graphql/mutations/user-sign-in.js

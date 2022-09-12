@@ -1,10 +1,9 @@
 <script>
   import { _ } from 'svelte-i18n';
   import { gql, getContextClient } from '@urql/svelte';
-  import { page } from '$app/stores';
+  import { userSignInResult, userEmail } from '$lib/stores';
   import { goto } from '$app/navigation';
   import { mutationUserSignIn } from '$lib/graphql/mutations/user-sign-in.js';
-  import { userEmail } from '$lib/stores.js';
   import { setLocaleSettings, getStoredLocale } from '$lib/locales/i18n.js';
 
   // NOTE:  Using @urql/core, which is imported with @urql/svelte in 
@@ -25,6 +24,7 @@
       .mutation(gql(mutationUserSignIn), variables)
       .toPromise()
       .then(result => {
+        $userSignInResult = result
         if (result.error) {
           console.log('(other errors ---->)', result.error);
         } else if (result.data.userSignIn.errors[0]) {
@@ -55,10 +55,6 @@
     //  since the hooks.js file does not run again after sign in, unless the
     //  page is manually refreshed.
     document.cookie = 'userEmail=' + $userEmail + '; SameSite=Lax';
-// TO DO FIX SESSION STORAGE OF USER EMAIL, NOW:
-// TO DO FIX SESSION STORAGE OF USER EMAIL, NOW:
-// TO DO FIX SESSION STORAGE OF USER EMAIL, NOW:
-    //$session = { 'userEmail': $userEmail }
 
     let currentLocale = getStoredLocale();
     let userLocale = userData.user.locale.localeCode;
@@ -88,19 +84,11 @@
   <button type="submit">{$_('buttonsSubmit.signIn')}</button>
 </form>
   
-
-<!--
-// TO DO, FIX PAGE ERROR MESSAGES, NOW:
-// TO DO, FIX PAGE ERROR MESSAGES, NOW:
-// TO DO, FIX PAGE ERROR MESSAGES, NOW:
-
-  {#if $userSignIn.fetching}
-    Loading...Error
-  {:else if $userSignIn.error}
-    <!- -
-      TODO: need a lot of work for error handling, but this one will trigger
-            when there's a 'Fail2Ban' type of lockout on API, among other errors
-    - ->
+  {#if $userSignInResult.error}
+    <!--
+    TODO: need a lot of work for error handling, but this one will trigger
+          when there's a 'Fail2Ban' type of lockout on API, among other errors
+    -->
     <br>
     <p>Failed login attempt.<br> 
     Something unusual went wrong.<br>
@@ -108,17 +96,13 @@
     </p>
   {/if}
 
-  {#if $userSignInStore.data}
-    {#if $userSignInStore.data.userSignIn.errors.length > 0}
+  {#if $userSignInResult.data}
+    {#if $userSignInResult.data.userSignIn.errors.length > 0}
       {(console.log(
-          'SIGN IN ERRORS ---->'
-<!--
+          'SIGN IN ERRORS ---->', $userSignInResult.data.userSignIn.errors
         ), ''
       )}
--->
-<!--
       <br>
       <p>Failed login attempt.</p>
     {/if}
   {/if}
--->
