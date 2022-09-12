@@ -12,15 +12,13 @@
   //        src/routers/+layout.svelte, due to issues getting results 
   //        from mutationStore in current version of @urql/svelte,
   //        as of 2022-09-11.
+
   let client = getContextClient();
 
   const userSignIn = gql(mutationUserSignIn);
 
-  let result;
-  let variables;
-  let userData;
   function handleSubmit(event) {
-    variables = {
+    let variables = {
       email: event.target.email.value,
       password: event.target.password.value
     };
@@ -29,13 +27,18 @@
       .mutation(userSignIn, variables)
       .toPromise()
       .then(result => {
-        console.log(result);
-        //debugger;
-        userData = result.data
+        if (result.error) {
+          console.log('(other errors ---->)', result.error);
+        } else if (result.data.userSignIn.errors[0]) {
+          console.log(
+            '(sign in error ---->)',
+            result.data.userSignIn.errors[0].message
+          );
+        } else {
+          setUserState(result.data.userSignIn);
+        }
       });
-    debugger;
   };
-  console.log("----- userData: ", userData);
 
   function setUserState(userData) {
     localStorage.setItem('token', userData.token);

@@ -279,7 +279,7 @@ tabnew
 tabnew
 tabnew
 tabrewind
-edit src/routes/_all-locales/user-sign-in/+page.svelte
+edit /Volumes/Documents1/DreamOnline/apps_front_end/dreamonline_sveltekit_version1/src/routes/_all-locales/user-sign-in.svelte
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -307,6 +307,8 @@ exe '4resize ' . ((&lines * 31 + 34) / 68)
 exe 'vert 4resize ' . ((&columns * 89 + 135) / 270)
 argglobal
 3argu
+if bufexists("/Volumes/Documents1/DreamOnline/apps_front_end/dreamonline_sveltekit_version1/src/routes/_all-locales/user-sign-in.svelte") | buffer /Volumes/Documents1/DreamOnline/apps_front_end/dreamonline_sveltekit_version1/src/routes/_all-locales/user-sign-in.svelte | else | edit /Volumes/Documents1/DreamOnline/apps_front_end/dreamonline_sveltekit_version1/src/routes/_all-locales/user-sign-in.svelte | endif
+balt src/routes/_all-locales/user-sign-in/+page.svelte
 setlocal keymap=
 setlocal noarabic
 setlocal noautoindent
@@ -436,11 +438,11 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 32) / 64)
+let s:l = 22 - ((21 * winheight(0) + 32) / 64)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
+keepjumps 22
 normal! 0
 wincmd w
 argglobal
@@ -575,11 +577,11 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 36 - ((35 * winheight(0) + 32) / 64)
+let s:l = 21 - ((20 * winheight(0) + 32) / 64)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 36
+keepjumps 21
 normal! 05|
 wincmd w
 argglobal
@@ -2205,9 +2207,10 @@ keepjumps 1
 normal! 0
 tabnext 1
 set stal=1
+badd +1 /Volumes/Documents1/DreamOnline/apps_front_end/dreamonline_sveltekit_version1/src/routes/_all-locales/user-sign-in.svelte
 badd +1 src/routes/_all-locales/entry-create/+page.svelte
-badd +6 src/routes/_all-locales/user-register/+page.svelte
-badd +1 src/routes/_all-locales/user-sign-in/+page.svelte
+badd +1 src/routes/_all-locales/user-register/+page.svelte
+badd +36 src/routes/_all-locales/user-sign-in/+page.svelte
 badd +1 src/routes/_all-locales/user-sign-out/+page.svelte
 badd +1 src/routes/_all-locales/entries-all/+page.svelte
 badd +23 src/routes/_templates-for-new-locales/_page-protection-module-options.svelte
@@ -2228,7 +2231,6 @@ if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
-nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :
