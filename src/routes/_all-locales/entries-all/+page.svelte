@@ -1,10 +1,11 @@
 <script>
-  import { operationStore, query } from '@urql/svelte';
+  import { queryStore, gql, getContextClient } from '@urql/svelte';
   import { queryEntriesAll } from '$lib/graphql/queries/entries-all.js';
 
-  const entries = operationStore(`${queryEntriesAll}`);
-
-  query(entries);
+  const entries = queryStore({
+    client: getContextClient(),
+    query: gql(queryEntriesAll),
+  });
 
 </script>
 
