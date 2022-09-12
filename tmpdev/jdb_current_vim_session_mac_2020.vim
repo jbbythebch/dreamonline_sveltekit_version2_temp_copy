@@ -438,12 +438,12 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 22 - ((21 * winheight(0) + 32) / 64)
+let s:l = 43 - ((0 * winheight(0) + 32) / 64)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 22
-normal! 0
+keepjumps 43
+normal! 03|
 wincmd w
 argglobal
 3argu
@@ -577,12 +577,12 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 21 - ((20 * winheight(0) + 32) / 64)
+let s:l = 1 - ((0 * winheight(0) + 32) / 64)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 21
-normal! 05|
+keepjumps 1
+normal! 0
 wincmd w
 argglobal
 3argu
@@ -2210,7 +2210,7 @@ set stal=1
 badd +1 /Volumes/Documents1/DreamOnline/apps_front_end/dreamonline_sveltekit_version1/src/routes/_all-locales/user-sign-in.svelte
 badd +1 src/routes/_all-locales/entry-create/+page.svelte
 badd +1 src/routes/_all-locales/user-register/+page.svelte
-badd +36 src/routes/_all-locales/user-sign-in/+page.svelte
+badd +1 src/routes/_all-locales/user-sign-in/+page.svelte
 badd +1 src/routes/_all-locales/user-sign-out/+page.svelte
 badd +1 src/routes/_all-locales/entries-all/+page.svelte
 badd +23 src/routes/_templates-for-new-locales/_page-protection-module-options.svelte
@@ -2231,6 +2231,7 @@ if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

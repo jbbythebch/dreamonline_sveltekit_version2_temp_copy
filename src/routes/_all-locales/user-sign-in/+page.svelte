@@ -15,8 +15,6 @@
 
   let client = getContextClient();
 
-  const userSignIn = gql(mutationUserSignIn);
-
   function handleSubmit(event) {
     let variables = {
       email: event.target.email.value,
@@ -24,7 +22,7 @@
     };
 
     client
-      .mutation(userSignIn, variables)
+      .mutation(gql(mutationUserSignIn), variables)
       .toPromise()
       .then(result => {
         if (result.error) {
@@ -57,9 +55,10 @@
     //  since the hooks.js file does not run again after sign in, unless the
     //  page is manually refreshed.
     document.cookie = 'userEmail=' + $userEmail + '; SameSite=Lax';
+// TO DO FIX SESSION STORAGE OF USER EMAIL, NOW:
+// TO DO FIX SESSION STORAGE OF USER EMAIL, NOW:
+// TO DO FIX SESSION STORAGE OF USER EMAIL, NOW:
     //$session = { 'userEmail': $userEmail }
-    $page.data.userEmail = $userEmail
-    console.log($page.data.userEmail);
 
     let currentLocale = getStoredLocale();
     let userLocale = userData.user.locale.localeCode;
@@ -89,7 +88,12 @@
   <button type="submit">{$_('buttonsSubmit.signIn')}</button>
 </form>
   
+
 <!--
+// TO DO, FIX PAGE ERROR MESSAGES, NOW:
+// TO DO, FIX PAGE ERROR MESSAGES, NOW:
+// TO DO, FIX PAGE ERROR MESSAGES, NOW:
+
   {#if $userSignIn.fetching}
     Loading...Error
   {:else if $userSignIn.error}
