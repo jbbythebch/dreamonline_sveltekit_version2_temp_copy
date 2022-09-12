@@ -15,7 +15,6 @@
     userApiSignOut();
     removeUserFromLocalStorage();
     removeUserFromStore();
-    removeEmailCookie();
     goto('user-signed-out');
   }
 
@@ -45,11 +44,7 @@
   }
 
   function removeUserFromStore() {
-    userEmail.set(null);
-  }
-
-  function removeEmailCookie() {
-    document.cookie = 'userEmail=; expires=Thu, 01 Jan 1970 00:00:00 GMT;'
+    $userEmail.set(null);
   }
 </script>
 
