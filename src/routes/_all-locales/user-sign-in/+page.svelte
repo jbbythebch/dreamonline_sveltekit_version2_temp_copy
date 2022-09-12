@@ -42,10 +42,7 @@
     localStorage.setItem('token', userData.token);
     //userEmail is saved to a store, for use throughout the app, including for 
     //  page protection, as noted in comments below
-    $userEmail = userData.user.email;
-    localStorage.setItem('userEmail', $userEmail);
-    //userEmail from local storage is only used to protect SvelteKit client
-    //  pages.
+    //$userEmail is only used to protect SvelteKit client pages.
     //  It is not used at all for user authentication at the API.
     //  The protection for client pages is just to reduce calls to the API,
     //  by preventing any protected pages from loading if this value does
@@ -53,9 +50,8 @@
     //  attacks, just to reduce some types of attacks.)
     //  The real authentication is done on the back end via the API using 
     //  the JWT in LocalStorage.
-    //Related:  userEmail in localStorage is also used for page protection,
-    //  since the hooks.js file does not run again after sign in, unless the
-    //  page is manually refreshed.
+    $userEmail = userData.user.email;
+    localStorage.setItem('userEmail', $userEmail);
 
     let currentLocale = getStoredLocale();
     let userLocale = userData.user.locale.localeCode;
