@@ -445,6 +445,7 @@ normal! 0
 wincmd w
 argglobal
 3argu
+balt src/routes/_templates-for-new-locales/_page-protection-module-options.svelte
 setlocal keymap=
 setlocal noarabic
 setlocal noautoindent
@@ -574,12 +575,12 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 32) / 64)
+let s:l = 36 - ((35 * winheight(0) + 32) / 64)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
-normal! 0
+keepjumps 36
+normal! 05|
 wincmd w
 argglobal
 3argu
@@ -1765,11 +1766,11 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 16) / 32)
+let s:l = 2 - ((1 * winheight(0) + 16) / 32)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
+keepjumps 2
 normal! 0
 wincmd w
 argglobal
@@ -2204,16 +2205,16 @@ keepjumps 1
 normal! 0
 tabnext 1
 set stal=1
-badd +5 src/routes/_all-locales/entry-create/+page.svelte
+badd +1 src/routes/_all-locales/entry-create/+page.svelte
 badd +6 src/routes/_all-locales/user-register/+page.svelte
 badd +1 src/routes/_all-locales/user-sign-in/+page.svelte
 badd +1 src/routes/_all-locales/user-sign-out/+page.svelte
 badd +1 src/routes/_all-locales/entries-all/+page.svelte
+badd +23 src/routes/_templates-for-new-locales/_page-protection-module-options.svelte
 badd +1 src/lib/graphql/mutations/user-sign-in.js
 badd +1 src/lib/auth/page-protection.js
-badd +1 src/lib/client-utils/init-client.js
-badd +14 src/routes/_templates-for-new-locales/_page-protection-module-options.svelte
-badd +1 src/routes/+layout.svelte
+badd +5 src/lib/client-utils/init-client.js
+badd +30 src/routes/+layout.svelte
 badd +1 src/routes/en/entries-all/+page.svelte
 badd +1 src/routes/+error.svelte
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0

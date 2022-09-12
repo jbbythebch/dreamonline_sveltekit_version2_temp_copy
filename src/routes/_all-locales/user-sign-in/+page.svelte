@@ -1,38 +1,41 @@
 <script>
   import { _ } from 'svelte-i18n';
-  import { mutationStore, gql, getContextClient } from '@urql/svelte';
+  import { gql, getContextClient } from '@urql/svelte';
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';
   import { mutationUserSignIn } from '$lib/graphql/mutations/user-sign-in.js';
   import { userEmail } from '$lib/stores.js';
   import { setLocaleSettings, getStoredLocale } from '$lib/locales/i18n.js';
 
-  let variables;
-  let result;
+  // NOTE:  Using @urql/core, which is imported with @urql/svelte in 
+  //        src/lib/client-utils/init-client.js, which is run in 
+  //        src/routers/+layout.svelte, due to issues getting results 
+  //        from mutationStore in current version of @urql/svelte,
+  //        as of 2022-09-11.
   let client = getContextClient();
-  const userSignIn = (variables) => {
-    result = mutationStore({
-      client,
-      query: gql(mutationUserSignIn),
-      variables: variables,
-    });
-    debugger;
-  };
 
+  const userSignIn = gql(mutationUserSignIn);
+
+  let result;
+  let variables;
+  let userData;
   function handleSubmit(event) {
     variables = {
       email: event.target.email.value,
       password: event.target.password.value
     };
-    //userSignIn(variables);
-    userSignIn(variables).then(result => {
-      if (result.error) {
-        console.log("----- ERROR AT userSignIn -------", result.error);
-      }
-    });
+
+    client
+      .mutation(userSignIn, variables)
+      .toPromise()
+      .then(result => {
+        console.log(result);
+        //debugger;
+        userData = result.data
+      });
     debugger;
-    console.log("------------ just past userSignIn ---------");
-  }
+  };
+  console.log("----- userData: ", userData);
 
   function setUserState(userData) {
     localStorage.setItem('token', userData.token);
