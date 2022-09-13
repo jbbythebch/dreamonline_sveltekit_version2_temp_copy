@@ -1,6 +1,6 @@
 <script>
   import { gql, getContextClient } from '@urql/svelte';
-  import { userRegisterResultStore, userEmailStore } from '$lib/stores';
+  import { userRegisterResultStore } from '$lib/stores';
   import { mutationUserRegister } from '$lib/graphql/mutations/user-register.js'
   import { getStoredLocale } from '$lib/locales/i18n.js';
 

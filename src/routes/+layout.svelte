@@ -35,7 +35,7 @@
     document.title = $_('site.title');
     let email = '';
     if (email = getUserEmail())  {
-      userEmail.set(email);
+      $userEmailStore = email;
     }
     if (hasLocaleChanged) {
       let newBase = setBaseURL($locale);
