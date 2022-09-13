@@ -1,0 +1,110 @@
+{
+	"_BabeleditLanguageAndFileName": "es-ES, es.json",
+	"_THIS_FILE:": "",
+	"buttonsSubmit": {
+		"register": "Registro",
+		"signIn": "Registrarse"
+	},
+	"labelsInput": {
+		"confirmPassword": "Confirmar contraseña",
+		"email": "Correo electrónico",
+		"nickname_esu": "Apodo",
+		"password": "Contraseña"
+	},
+	"linksInternal": {
+		"about": "",
+		"home": "",
+		"register": "",
+		"signIn": "",
+		"userEntries": ""
+	},
+	"lookupTables": {
+		"sharingStatuses": {
+			"disabled": "",
+			"enabled": ""
+		}
+	},
+	"messagesError": {
+		"signIn": "Su combinación de nombre de usuario y contraseña no es válida.<br> Inténtelo de nuevo."
+	},
+	"messagesValidation": {
+		"confirmPassword": "Por favor, rellene este campo, con al menos 4 caracteres",
+		"email": "Por favor rellene este campo",
+		"nickname": "Por favor rellene este campo",
+		"password": "Por favor, rellene este campo, con al menos 4 caracteres"
+	},
+	"nav": {
+		"about": "",
+		"register": "",
+		"signIn": "",
+		"submenus": {
+			"about": "",
+			"aboutDreamOnline": "",
+			"aboutUs": "",
+			"contact": "",
+			"dreamEntryNew": "",
+			"dreamEntryNewQuickNote": "",
+			"dreamJournal": "",
+			"dreamViewRandom": "",
+			"dreamsBrowse": "",
+			"dreamsBrowseImages": "",
+			"dreamsBrowseQuickNotes": "",
+			"dreamsPrintOrDownload": "",
+			"dreamwork": "",
+			"dreamworkStartWithConnectedDreamsSet": "",
+			"dreamworkStartWithDream": "",
+			"dreamworkStartWithEvents": "",
+			"dreamworkStartWithLifeJournalEntry": "",
+			"dreamworkStartWithPeopleMentioned": "",
+			"faq": "",
+			"gettingStarted": "",
+			"helpAll": "",
+			"lifeJournal": "",
+			"lifeJournalBrowseEntries": "",
+			"lifeJournalBrowseEntriesForDream": "",
+			"lifeJournalEntryNew": "",
+			"lifeJournalEntryNewAttachedToDream": "",
+			"lifeJournalPrintOrDownload": "",
+			"pricing": "",
+			"securityAndPrivacy": "",
+			"sharingShowDreamsSharedWithMe": "",
+			"sharingShowLifeJournalEntriesSharedWithMe": "",
+			"sharingShowMySharedDreams": "",
+			"sharingShowMySharedLifeJournalEntries": "",
+			"termsOfService": ""
+		},
+		"top": {
+			"about": "Acerca de",
+			"dreamEntryNew": "",
+			"help": "",
+			"home": "Inicio",
+			"journalsWorkingWith": "",
+			"lifeJournalEntryNew": "",
+			"more": "",
+			"pricing": "",
+			"register": "Registro",
+			"signIn": "Iniciar Sesión",
+			"userEntries": "Entradas de usuario"
+		}
+	},
+	"site": {
+		"title": "Sueño en Línea"
+	},
+	"textOnPages": {
+		"about": {
+			"heading": "",
+			"mainText": ""
+		},
+		"home": {
+			"heading": "¡Bienvenido a DreamOnline! Una excelente manera de trabajar con tus sueños.",
+			"mainText": ""
+		},
+		"register": {
+			"passwordLossWarning": "Asegúrese de conocer su contraseña. <br> <br> Si la pierde, actualmente no hay forma de restablecerla, por lo que perderá el acceso a su contenido en este sitio, debido a que está cifrado. Se requiere su contraseña para acceder a su contenido en este sitio y no podemos restablecerla por usted. <br> <br> (Tendremos algunas opciones de restablecimiento disponibles tan pronto como podamos crearlas).",
+			"passwordLossWarningTitle": "No pierdas tu contraseña!",
+			"passwordsDoNotMatchMessage": "Las entradas de contraseña y Confirmar contraseña no coinciden. Por favor use la misma contraseña en ambas entradas. Para ver lo que ha escrito, haga clic en el icono del ojo si nadie más puede ver su pantalla.",
+			"passwordsDoNotMatchTitle": "Las contraseñas no coinciden",
+			"willBeSignedInAutomatically": "(Se registrará automáticamente cuando se registre.)"
+		}
+	}
+}

@@ -1,0 +1,14 @@
+{
+  "en": { 
+    "localeDesc": "English",
+    "direction": "ltr"
+  },
+  "es": { 
+    "localeDesc": "Español (Spanish)",
+    "direction": "ltr"
+  },
+  "ar": { 
+    "localeDesc": "العربية (Arabic)",
+    "direction": "rtl"
+  }
+}

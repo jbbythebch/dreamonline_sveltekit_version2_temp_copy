@@ -1,0 +1,36 @@
+# Our Node base image
+FROM node:16.17.0
+
+# Set the Node environment to development to ensure all packages are installed
+#ENV NODE_ENV development
+
+# Change our current working directory
+WORKDIR /dreamonline
+
+# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
+# JDB, several lines below are commented out, with a comment above them like this:
+#   '# ---- not needed for development, handled per docker-compose.yml in API
+#   The lines would normally handle copying files to the docker image,
+#   and running the CMD for the container, but in development, this is 
+#   all handled via the docker-compose.yml file in the root folder of the API.
+# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
+
+# Copy over `package.json` and lock files to optimize the build process
+# ---- not needed for development, handled per docker-compose.yml in API
+#COPY ["package.json", "package-lock.json*", "./"]
+
+# Install Node modules
+# ---- not needed for development, handled per docker-compose.yml in API
+#RUN npm install
+
+# Copy over rest of the project files
+# ---- not needed for development, handled per docker-compose.yml in API
+#COPY . .
+
+# Expose port 8080 for the SvelteKit app and 24678 for Vite's HMR
+#EXPOSE 8080 24678
+EXPOSE 8080
+
+# Run `npm run dev...` and set the host to 0.0.0.0 so we can access the web app from outside
+# ---- not needed for development, handled per docker-compose.yml in API
+#CMD ["npm", "run", "dev", "--", "--port", "8080", "--host", "0.0.0.0"]

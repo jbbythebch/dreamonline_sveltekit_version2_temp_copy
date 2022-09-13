@@ -1,38 +1,41 @@
-# create-svelte
+# Notes
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## Mutations, as of 2022-09-11
 
-## Creating a project
+For all mutations, at least for now, not using the urql svelte bindings.  Instead, just using @urql/core, which is imported with @urql/svelte in src/lib/client-utils/init-client.js, which is run in src/routers/+layout.svelte, due to issues getting results from mutationStore in current version of @urql/svelte, as of 2022-09-11.
 
-If you're seeing this, you've probably already done this step. Congrats!
+# Internationalizaion
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Adding a New Locale
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+Steps for adding a new locale (<my-new-locale>):
+- Add the new locale to the API (see the API for details).
+- Add the new locale folder as `/src/routes/<my-new-locale>`.
+- Add the new locale folder name as a destination for updating files in the shell script file `/dev_shell_scripts/update_locales.sh`; by adding it to the array '# All locales should be included here:'.
+- From inside the `/dev_shell_scripts/` folder, run `update_locales.sh` (run: `./update_locales.sh` so bash finds it in the current directory).
 
-## Developing
+- If any locale-specific customization is needed for any pages in <my-new-locale>:
+  - Add the new locale folder as `/src/routes/_custom-locale-pages/<my-new-locale>`.
+  - A customized page for a locale can be created by copying any page from `src/routes/_all-locales/` to the '/src/routes/<my-new-locale>/' folder.
+  - Once the customization is complete, **make sure to copy the customized file** to the `/src/routes/_custom-locale-pages/<my-new-locale/` folder, **otherwise the changes will be lost when running the 'update_locales.sh` script**, as noted above.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+- Add a new dictionary file as '/src/lib/locales/dictionaries/<my-new-locale>.json'
 
-```bash
-npm run dev
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## Making Global Changes to Locale Files
 
-## Building
+Steps for making global changes to locale files:
+- Change any or all files in `/src/routes/_templates-for-new-locales`.
+- Change any or all files in `/src/routes/_custom-locale-pages`.
+- From inside the `/dev_shell_scripts/` folder, run `update_locales.sh` (run: `./update_locales.sh` so bash finds it in the current directory).
 
-To create a production version of your app:
 
-```bash
-npm run build
-```
+## Page Protection (Only Allowing Authenticated Users to View a Page)
 
-You can preview the production build with `npm run preview`.
+The files in `src/routes/_templates_for_new_locales/` are a clean copy of files to be used in any new locale.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+All these files do is:
+- import a component with the matching filename from `src/routes/_all-locales`.
+- for a protected page, ensure the user is authenticated
+
+See the file `src/routes/_templates_for_new_locales/_page-protection-module-options.svelte`, for 2 options for adding page protection to any page.  One option is just for page protection, and the other allows for adding other functions to run when the 'load' function is called, in addition to providing page protection.
