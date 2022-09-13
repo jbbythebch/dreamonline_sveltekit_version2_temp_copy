@@ -1,24 +1,28 @@
 <script>
   import { _ } from 'svelte-i18n';
   import { gql, getContextClient } from '@urql/svelte';
-  import { userSignInResult, userEmail } from '$lib/stores';
+  import { userSignInResultStore, userEmailStore } from '$lib/stores';
   import { goto } from '$app/navigation';
   import { mutationUserSignIn } from '$lib/graphql/mutations/user-sign-in.js';
   import { setLocaleSettings, getStoredLocale } from '$lib/locales/i18n.js';
 
   let client = getContextClient();
+  let variables;
 
   function handleSubmit(event) {
-    let variables = {
+    variables = {
       email: event.target.email.value,
       password: event.target.password.value
     };
+    signInUser();
+  };
 
+  function signInUser() {
     client
       .mutation(gql(mutationUserSignIn), variables)
       .toPromise()
       .then(result => {
-        $userSignInResult = result
+        $userSignInResultStore = result;
         if (result.error) {
           console.log('(other errors ---->)', result.error);
         } else if (result.data.userSignIn.errors[0]) {
@@ -30,13 +34,13 @@
           setUserState(result.data.userSignIn);
         }
       });
-  };
+  }
 
   function setUserState(userData) {
     localStorage.setItem('token', userData.token);
     //userEmail is saved to a store, for use throughout the app, including for 
     //  page protection, as noted in comments below
-    //$userEmail is only used to protect SvelteKit client pages.
+    //$userEmailStore is only used to protect SvelteKit client pages.
     //  It is not used at all for user authentication at the API.
     //  The protection for client pages is just to reduce calls to the API,
     //  by preventing any protected pages from loading if this value does
@@ -44,8 +48,8 @@
     //  attacks, just to reduce some types of attacks.)
     //  The real authentication is done on the back end via the API using 
     //  the JWT in LocalStorage.
-    $userEmail = userData.user.email;
-    localStorage.setItem('userEmail', $userEmail);
+    $userEmailStore = userData.user.email;
+    localStorage.setItem('userEmail', $userEmailStore);
 
     let currentLocale = getStoredLocale();
     let userLocale = userData.user.locale.localeCode;
@@ -75,7 +79,7 @@
   <button type="submit">{$_('buttonsSubmit.signIn')}</button>
 </form>
   
-  {#if $userSignInResult.error}
+  {#if $userSignInResultStore.error}
     <!--
     TODO: need a lot of work for error handling, but this one will trigger
           when there's a 'Fail2Ban' type of lockout on API, among other errors
@@ -87,10 +91,10 @@
     </p>
   {/if}
 
-  {#if $userSignInResult.data}
-    {#if $userSignInResult.data.userSignIn.errors.length > 0}
+  {#if $userSignInResultStore.data}
+    {#if $userSignInResultStore.data.userSignIn.errors.length > 0}
       {(console.log(
-          'SIGN IN ERRORS ---->', $userSignInResult.data.userSignIn.errors
+          'SIGN IN ERRORS ---->', $userSignInResultStore.data.userSignIn.errors
         ), ''
       )}
       <br>

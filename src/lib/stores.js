@@ -1,5 +1,7 @@
 import { writable } from 'svelte/store';
 
-export const userEmail = writable("");
+export const userEmailStore = writable("");
 
-export const userSignInResult = writable("");
+export const userSignInResultStore = writable("");
+
+export const userRegisterResultStore = writable("");

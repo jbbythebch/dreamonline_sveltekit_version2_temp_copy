@@ -1,7 +1,7 @@
-import { userEmail } from '$lib/stores.js';
+import { userEmailStore } from '$lib/stores.js';
 
 export function pageProtection() {
-  if ($userEmail) {
+  if ($userEmailStore) {
     return {
       status: 302,
       redirect: `user-sign-in-auth-redirect`

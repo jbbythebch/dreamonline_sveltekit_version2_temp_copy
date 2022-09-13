@@ -2,7 +2,7 @@
   import { _ } from 'svelte-i18n';
   import { gql, getContextClient } from '@urql/svelte';
   import { mutationUserSignOut } from '$lib/graphql/mutations/user-sign-out.js';
-  import { userEmail } from '$lib/stores.js';
+  import { userEmailStore } from '$lib/stores.js';
   import { getUserEmail } from '$lib/client-utils/get-user-email.js';
   import { getToken } from '$lib/client-utils/get-token.js';
   import { goto } from '$app/navigation';
@@ -41,7 +41,7 @@
   }
 
   function removeUserFromStore() {
-    $userEmail = null;
+    $userEmailStore = null;
   }
 </script>
 

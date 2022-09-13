@@ -1,21 +1,11 @@
 <script>
-  import { operationStore, mutation} from '@urql/svelte';
+  import { gql, getContextClient } from '@urql/svelte';
+  import { userRegisterResultStore, userEmailStore } from '$lib/stores';
   import { mutationUserRegister } from '$lib/graphql/mutations/user-register.js'
   import { getStoredLocale } from '$lib/locales/i18n.js';
 
+  let client = getContextClient();
   let variables;
-
-  const userRegisterStore = operationStore(`${mutationUserRegister}`);
-
-  const userRegisterMutation = mutation(userRegisterStore);
-
-  function userRegister(variables) {
-    userRegisterMutation(variables).then(result => {
-      if (result.error) {
-        console.log('ERROR:', result.error);
-      }
-    });
-  }
 
   function handleSubmit(event) {
     let currentLocale = getStoredLocale();
@@ -24,8 +14,21 @@
       password: event.target.password.value,
       localeCode: currentLocale
     }
-    userRegister(variables);
+    registerUser(variables);
   }
+
+  function registerUser(variables) {
+    client
+      .mutation(gql(mutationUserRegister), variables)
+      .toPromise()
+      .then(result => {
+        $userRegisterResultStore = result;
+         if (result.error) {
+           console.log('ERROR:', result.error);
+         }
+      });
+  }
+
 </script>
 
 <form
@@ -42,8 +45,8 @@
   <button type="submit">Register User</button>
 </form>
 
-{#if $userRegisterStore.data}
-  <p>User {$userRegisterStore.data.userRegister.email} has registered.</p>
-{:else if $userRegisterStore.error}
+{#if $userRegisterResultStore.data}
+  <p>User {$userRegisterResultStore.data.userRegister.email} has registered.</p>
+{:else if $userRegisterResultStore.error}
   <p>Error:  The user was not created.  Please contact us.</p>
 {/if}

@@ -17,7 +17,7 @@
   import { initializeClient } from '$lib/client-utils/init-client.js'; 
   import LocaleSwitcher from '$lib/locales/locale-switcher.svelte';
   import UserEmail from '$lib/users/user-email.svelte';
-  import { userEmail } from '$lib/stores.js';
+  import { userEmailStore } from '$lib/stores.js';
   import { getUserEmail } from '$lib/client-utils/get-user-email.js';
   import NavAuthenticated from '$lib/nav/nav-authenticated.svelte';
   import NavUnAuthenticated from '$lib/nav/nav-unauthenticated.svelte';
@@ -59,7 +59,7 @@
 
   <UserEmail />
 
-  {#if $userEmail}
+  {#if $userEmailStore}
     <NavAuthenticated />
   {:else}
     <NavUnAuthenticated />

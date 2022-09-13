@@ -1,8 +1,8 @@
 <script>
-  import { userEmail } from '$lib/stores.js';
+  import { userEmailStore } from '$lib/stores.js';
 </script>
 
-{#if $userEmail }
-  Signed in: {$userEmail}
+{#if $userEmailStore }
+  Signed in: {$userEmailStore}
 {/if}
 
