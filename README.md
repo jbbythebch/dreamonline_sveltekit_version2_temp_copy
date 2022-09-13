@@ -1,3 +1,9 @@
+# Notes
+
+## Mutations, as of 2022-09-11
+
+For all mutations, at least for now, not using the urql svelte bindings.  Instead, just using @urql/core, which is imported with @urql/svelte in src/lib/client-utils/init-client.js, which is run in src/routers/+layout.svelte, due to issues getting results from mutationStore in current version of @urql/svelte, as of 2022-09-11.
+
 # Internationalizaion
 
 ## Adding a New Locale

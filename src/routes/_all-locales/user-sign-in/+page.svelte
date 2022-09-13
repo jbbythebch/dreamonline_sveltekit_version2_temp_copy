@@ -6,12 +6,6 @@
   import { mutationUserSignIn } from '$lib/graphql/mutations/user-sign-in.js';
   import { setLocaleSettings, getStoredLocale } from '$lib/locales/i18n.js';
 
-  // NOTE:  Using @urql/core, which is imported with @urql/svelte in 
-  //        src/lib/client-utils/init-client.js, which is run in 
-  //        src/routers/+layout.svelte, due to issues getting results 
-  //        from mutationStore in current version of @urql/svelte,
-  //        as of 2022-09-11.
-
   let client = getContextClient();
 
   function handleSubmit(event) {
